@@ -10,7 +10,7 @@ import { getLocationStats, getRequestStats, getVisitorStats } from './handleRout
 
 const server = http.createServer(async (req, res) => {
   const { url, method } = req;
-  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500'); 
+  res.setHeader('Access-Control-Allow-Origin', 'https://atamjon.robohouse.tech'); 
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -47,7 +47,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 connect().then(() => {
-  server.listen(8001, () => {
-    console.log('Server running on https://abdulloh-service.robohouse.tech');
+  server.listen(8002, () => {
+    console.log('Server running');
   });
 });
