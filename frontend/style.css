@@ -1,11 +1,14 @@
 .gradient-bg {
-    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e3a8a  100%);
 }
 
 .glass-card {
-    backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 16px rgba(31, 38, 135, 0.1);
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .floating-shapes {
@@ -13,71 +16,58 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    opacity: 0.3; 
 }
 
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(52, 211, 153, 0.1);
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
 }
 
 .shape:nth-child(1) {
-    width: 120px;
-    height: 120px;
-    top: 10%;
-    left: 5%;
+    width: 100px;
+    height: 100px;
+    top: 15%;
+    left: 10%;
     animation-delay: 0s;
+    background: rgba(31, 64, 155, 0.2);
 }
 
 .shape:nth-child(2) {
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    right: 5%;
-    animation-delay: 2s;
-}
-
-.shape:nth-child(3) {
-    width: 80px;
-    height: 80px;
-    bottom: 10%;
-    left: 15%;
-    animation-delay: 4s;
-}
-
-.shape:nth-child(4) {
     width: 150px;
     height: 150px;
-    top: 20%;
-    right: 20%;
-    animation-delay: 1s;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+    background: rgba(107, 114, 128, 0.2);
 }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
+    0%, 100% {
+        transform: translateY(0px);
     }
-
     50% {
-        transform: translateY(-20px) rotate(180deg);
+        transform: translateY(-10px);
     }
 }
 
 .slide-up {
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 1s ease-out;
 }
 
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f4f6;
 }

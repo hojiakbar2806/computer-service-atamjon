@@ -33,7 +33,7 @@ async function displayRequests(user) {
     if (requests.length === 0) {
       requestsList.innerHTML = `
         <div class="text-center py-12">
-            <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div class="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <i class="fas fa-inbox text-white/60 text-3xl"></i>
             </div>
             <h3 class="text-xl font-bold text-white mb-2">So'rovlar Topilmadi</h3>
@@ -124,7 +124,7 @@ async function displayRequests(user) {
     showNotification("So'rovlar yuklanmadi", "error")
     requestsList.innerHTML = `
       <div class="text-center py-12">
-          <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div class="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <i class="fas fa-exclamation-circle text-white/60 text-3xl"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Xatolik</h3>
@@ -186,7 +186,7 @@ async function showDetailModal(requestId) {
                       So'rov Tafsilotlari
                   </h2>
                   <button onclick="document.getElementById('modalContainer').innerHTML = ''" 
-                          class="text-white/60 hover:text-white text-xl hover:bg-white/10 rounded-lg p-2 transition-all">
+                          class="text-white/60 hover:text-white text-xl hover:bg-black/20 rounded-lg p-2 transition-all">
                       <i class="fas fa-times"></i>
                   </button>
               </div>
@@ -266,7 +266,7 @@ async function showDetailModal(requestId) {
               
               <div class="flex justify-end gap-3 mt-6">
                   <button onclick="document.getElementById('modalContainer').innerHTML = ''" 
-                          class="bg-white/10 text-white/70 px-4 py-2 rounded-lg text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                          class="bg-black/20 text-white/70 px-4 py-2 rounded-lg text-sm hover:bg-white/20 transition-all flex items-center gap-2">
                       <i class="fas fa-times text-xs"></i> 
                       Yopish
                   </button>
@@ -343,7 +343,7 @@ async function showUpdateModal(requestId) {
                       So'rovni Yakunlash
                   </h2>
                   <button onclick="document.getElementById('modalContainer').innerHTML = ''" 
-                          class="text-white/60 hover:text-white text-xl hover:bg-white/10 rounded-lg p-2 transition-all">
+                          class="text-white/60 hover:text-white text-xl hover:bg-black/20 rounded-lg p-2 transition-all">
                       <i class="fas fa-times"></i>
                   </button>
               </div>
@@ -357,7 +357,7 @@ async function showUpdateModal(requestId) {
                       </label>
                       <input type="number" id="price" name="price" required min="0" step="1000"
                              placeholder="Masalan: 150000"
-                             class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                             class="w-full p-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
                   </div>
 
                   <!-- Finish Time Input -->
@@ -367,7 +367,7 @@ async function showUpdateModal(requestId) {
                           Tugash Vaqti
                       </label>
                       <input type="datetime-local" id="finishedAt" name="finishedAt" required
-                             class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                             class="w-full p-3 bg-black/20 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
                   </div>
 
                   <!-- Component Selection -->
@@ -379,7 +379,7 @@ async function showUpdateModal(requestId) {
                       
                       <div class="space-y-3">
                           <select id="componentSelect" name="componentId"
-                                  class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                                  class="w-full p-3 bg-black/20 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
                               <option value="">Komponent tanlang (ixtiyoriy)</option>
                               ${components.map((c) => 
                                 `<option value="${c._id}" data-price="${c.price}" data-max="${c.quantity}">
@@ -394,7 +394,7 @@ async function showUpdateModal(requestId) {
                               </label>
                               <input type="number" id="componentQuantity" name="componentQuantity" 
                                      min="1" placeholder="Miqdorni kiriting"
-                                     class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                                     class="w-full p-3 bg-black/20 border border-white/20 rounded-lg text-white placeholder-white/40 focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
                               <div id="quantityInfo" class="text-xs text-white/50 mt-1"></div>
                           </div>
                       </div>
