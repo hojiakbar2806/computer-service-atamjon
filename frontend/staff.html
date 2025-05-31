@@ -28,7 +28,7 @@
                         </h1>
                     </div>
 
-                    <div class="hidden md:flex items-center space-x-1" id="navLinks">
+                    <div class="hidden lg:flex items-center space-x-1" id="navLinks">
                     </div>
 
                     <div class="flex items-center space-x-4">
@@ -42,10 +42,19 @@
                             class="bg-red-600/20 text-red-400 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-600/30 transition-all">
                             <i class="fas fa-sign-out-alt mr-2"></i>Chiqish
                         </button>
+                        <button id="mobileMenuButton" class="lg:hidden flex items-center p-2 focus:outline-none">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
+            <div class="w-full overflow-hidden transition-all duration-300 ease-in-out max-h-0" id="mobileNavLinks">
+            </div>
         </nav>
+
 
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex mb-8 flex justify-between gap-5 ">

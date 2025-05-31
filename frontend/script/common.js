@@ -112,6 +112,17 @@ function renderNavbar(role, activePage) {
       `,
       )
       .join("")
+
+      document.getElementById('mobileNavLinks').innerHTML = links[role]
+      .map(
+        (link) => `
+          <a href="${link.href}" class="nav-link flex items-center px-4 py-2 text-gray-300 hover:text-white rounded-lg transition-all ${activePage === link.href.split(".")[0] ? "active" : ""}">
+              <i class="fas ${link.icon} mr-2"></i>
+              <span>${link.text}</span>
+          </a>
+      `,
+      )
+      .join("")
 }
 
 async function initPage(page) {
@@ -174,3 +185,21 @@ function getStatusColor(status) {
       return "bg-gray-800 text-white"
   }
 }
+
+
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileNavLinks = document.getElementById('mobileNavLinks');
+
+let isOpen = false;
+mobileMenuButton.addEventListener('click', function () {
+    isOpen = !isOpen;
+    if (isOpen) {
+        mobileNavLinks.classList.remove('max-h-0');
+        mobileNavLinks.classList.add('max-h-[500px]');
+        mobileNavLinks.classList.add('border-t');
+      } else {
+        mobileNavLinks.classList.remove('max-h-[500px]');
+        mobileNavLinks.classList.remove('border-t');
+        mobileNavLinks.classList.add('max-h-0');
+    }
+});

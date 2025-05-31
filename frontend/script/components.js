@@ -79,7 +79,7 @@ function showCreateComponent() {
         <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div class="glass-card rounded-2xl p-8 max-w-lg w-full">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold text-white">Yangi Component Qo'shish</h2>
+                    <h2 class="text-2xl font-bold text-white">Yangi Ehtiyot qism Qo'shish</h2>
                     <button onclick="document.getElementById('modalContainer').innerHTML = ''" class="text-gray-400 hover:text-white">
                         <i class="fas fa-times text-xl"></i>
                     </button>
@@ -100,9 +100,9 @@ function showCreateComponent() {
                         </div>
                     </div>
                     <div class="space-y-1">
-                        <label for="quantity" class="block text-sm font-medium text-gray-300">Parol *</label>
+                        <label for="quantity" class="block text-sm font-medium text-gray-300">Miqdor *</label>
                         <input type="number" id="quantity" name="quantity" required
-                            placeholder="Parolni kiriting"
+                            placeholder="Miqdorini kiriting"
                             class="w-full px-4 py-3 glass-card rounded-xl text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-primary transition-all">
                     </div>
                     <div class="space-y-1">
@@ -111,7 +111,7 @@ function showCreateComponent() {
                     </div>
                     <div class="flex justify-end">
                         <button id="addComponent" type="submit" class="bg-primary/60 px-8 py-3 rounded-xl text-white font-semibold hover:shadow-lg transition-all inline-flex items-center">
-                            <span id="submitText">Xodim Qo'shish</span>
+                            <span id="submitText">Ehtiyot qism Qo'shish</span>
                             <i id="submitLoader" class="fas fa-spinner fa-spin ml-2 hidden"></i>
                         </button>
                     </div>
